@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { signIn, signUp } from './services/fetch-utils';
 
-export default function AuthPage() {
+export default function AuthPage({ setUser }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [signUpEmail, setSignUpEmail] = useState('');
@@ -14,8 +14,8 @@ export default function AuthPage() {
     const user = await signIn(email, password);
     console.log(user);
 
-    setEmail('');
-    setPassword('');
+    setUser(user);
+
   }
 
   async function handleSignUpSubmit(e) {
@@ -24,8 +24,7 @@ export default function AuthPage() {
     const user = await signUp(signUpEmail, signUpPassword);
     console.log(user);
 
-    setSignUpEmail('');
-    setSignUpPassword('');
+    setUser(user);
   }
 
 
