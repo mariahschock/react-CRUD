@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { createSong } from './services/fetch-utils';
 import { useHistory } from 'react-router-dom';
 
+import './App.css';
+
 export default function CreatePage() {
   const [title, setTitle] = useState('');
   const [artist, setArtist] = useState('');
@@ -27,9 +29,9 @@ export default function CreatePage() {
   }
 
   return (
-    <div>
-      <h2>Add Song</h2>
+    <div className="create-page">
       <form onSubmit={handleSubmit}>
+        <h2>Add Song</h2>
         <label>
           Title:
           <input onChange={e => setTitle(e.target.value)} value={title}></input>

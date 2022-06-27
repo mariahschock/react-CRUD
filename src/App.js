@@ -26,25 +26,25 @@ export default function App() {
 
   return (
     <Router>
-      <div className="links">
+      <h1>Song Track</h1>
+      <p>A place to store songs you like</p>
+      <div className="routing-page">
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Sign In</Link>
-            </li>
-            <li>
-              <Link to="/create">Add New Song</Link>
-            </li>
-            <li>
-              <Link to="/songs/1">Update a Song</Link>
-            </li>
-            <li>
-              <Link to="/songs">List of Your Songs</Link>
-            </li>
-          </ul>
-          {user &&
+          <div className="links">
+            <Link to="/"></Link>
+           
+            <Link to="/create">Add New Song</Link>
+            
+            <Link to="/songs/1">Update a Song</Link>
+            
+            <Link to="/songs">List of Your Songs</Link>
+            
+            
+            {user &&
           <button onClick={handleLogOutClick}>Logout</button>}
+          </div>
         </nav>
+        
 
         <Switch>
           <Route exact path="/">
@@ -62,7 +62,11 @@ export default function App() {
             }
           </Route>
           <Route exact path ="/create">
-            <CreatePage />
+            {
+              user
+                ? <CreatePage />
+                : <Redirect to="/" />
+            }
           </Route>
           <Route exact path="/songs:id">
             <UpdatePage />
