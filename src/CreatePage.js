@@ -14,12 +14,11 @@ export default function CreatePage() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const song = await createSong({
+    await createSong({
       title: title,
       artist: artist,
       color: color
     });
-    console.log(song);
 
     setTitle(''),
     setArtist('');

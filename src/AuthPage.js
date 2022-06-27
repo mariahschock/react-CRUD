@@ -15,7 +15,6 @@ export default function AuthPage({ setUser }) {
     e.preventDefault();
 
     const user = await signIn(email, password);
-    console.log(user);
 
     setUser(user);
 
@@ -25,9 +24,9 @@ export default function AuthPage({ setUser }) {
     e.preventDefault();
 
     const user = await signUp(signUpEmail, signUpPassword);
-    console.log(user);
 
     setUser(user);
+   
   }
 
 
@@ -49,7 +48,7 @@ export default function AuthPage({ setUser }) {
         </div>
       </form>
       <form onSubmit={handleSignUpSubmit}>
-        <div className='sign-up'>
+        <div className="sign-up">
           <h3>Sign Up</h3>
           <label>
             email:

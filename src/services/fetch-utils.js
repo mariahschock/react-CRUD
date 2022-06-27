@@ -9,10 +9,10 @@ export async function signIn(email, password) {
   return user;
 }
 
-export async function signUp(signUpEmail, signUpPassword) {
+export async function signUp(email, password) {
   const { user } = await client.auth.signUp({
-    email: signUpEmail,
-    password: signUpPassword,
+    email: email,
+    password: password,
   });
 
   return user;
@@ -20,6 +20,8 @@ export async function signUp(signUpEmail, signUpPassword) {
 
 export async function logout() {
   const { error } = await client.auth.signOut();
+
+  return error;
 }
 
 export async function createSong(song) {

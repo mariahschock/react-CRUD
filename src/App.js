@@ -31,7 +31,6 @@ export default function App() {
       <div className="routing-page">
         <nav>
           <div className="links">
-            <Link to="/"></Link>
            
             <Link to="/create">Add New Song</Link>
             
