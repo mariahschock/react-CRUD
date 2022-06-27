@@ -21,3 +21,15 @@ export async function signUp(signUpEmail, signUpPassword) {
 export async function logout() {
   const { error } = await client.auth.signOut();
 }
+
+export async function createSong(song) {
+  const { data } = await client.from('songs').insert(song).single();
+
+  return data;
+}
+
+export async function getSongs(songs) {
+  const { data } = await client.from('songs').select('*');
+
+  return data;
+}

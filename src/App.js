@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <Router>
-      <div>
+      <div className="links">
         <nav>
           <ul>
             <li>
