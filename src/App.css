@@ -30,3 +30,17 @@ label {
   display: flex;
   flex-direction: column;
 }
+.song {
+  display: flex;
+  flex-direction: column;
+  height: 175px;
+  width: 175px;
+  padding:20px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.song-list {
+  display: flex;
+  flex-wrap: wrap;
+}
