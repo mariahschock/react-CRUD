@@ -35,7 +35,6 @@ export default function App() {
            
             <Link to="/create">Add New Song</Link>
             
-            <Link to="/songs/1">Update a Song</Link>
             
             <Link to="/songs">List of Your Songs</Link>
             
@@ -68,7 +67,7 @@ export default function App() {
                 : <Redirect to="/" />
             }
           </Route>
-          <Route exact path="/songs:id">
+          <Route exact path="/songs/:id">
             <UpdatePage />
           </Route>
         </Switch>

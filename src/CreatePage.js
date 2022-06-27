@@ -9,7 +9,7 @@ export default function CreatePage() {
   const [title, setTitle] = useState('');
   const [artist, setArtist] = useState('');
   const [color, setColor] = useState('');
-  const history = useHistory('');
+  const history = useHistory();
 
   async function handleSubmit(e) {
     e.preventDefault();

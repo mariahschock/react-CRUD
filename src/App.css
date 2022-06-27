@@ -10,6 +10,9 @@
   margin: 20px;
   padding: 10px;
 }
+button {
+  margin: 20px;
+}
 .auth-form {
   display: flex;
   flex-direction: row;
@@ -39,8 +42,13 @@ label {
   margin: 10px;
   align-items: center;
   justify-content: center;
+  color: antiquewhite;
+  text-shadow: 0, 0, 2px solid black;
 }
 .song-list {
   display: flex;
   flex-wrap: wrap;
+}
+a:link {
+  text-decoration: none;
 }

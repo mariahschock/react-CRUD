@@ -28,8 +28,24 @@ export async function createSong(song) {
   return data;
 }
 
-export async function getSongs(songs) {
+export async function getSongs() {
   const { data } = await client.from('songs').select('*');
+
+  return data;
+}
+export async function updateSong(song, id) {
+  const { data } = await client.from('songs').update(song).match({ id: id }).single();
+
+  return data;
+}
+
+export async function getSingleSong(id) {
+  const { data } = await client.from('songs').select('*').match({ id }).single();
+
+  return data;
+}
+export async function deleteSong(id) {
+  const { data } = await client.from('songs').delete().match({ id: id }).single();
 
   return data;
 }

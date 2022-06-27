@@ -23,7 +23,7 @@ export default function ListPage() {
       {
         songs.map((song, i) => {
           return <Song
-            song={song} key={song.title + i + song.id} />;
+            song={song} key={song.title + i + song.color} />;
         })
       }
     </div>
