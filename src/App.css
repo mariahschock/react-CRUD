@@ -42,8 +42,10 @@ label {
   margin: 10px;
   align-items: center;
   justify-content: center;
+  text-align: center;
   color: antiquewhite;
   text-shadow: 0, 0, 2px solid black;
+  border-radius: 50%;
 }
 .song-list {
   display: flex;
